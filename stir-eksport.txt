@@ -1,0 +1,44 @@
+﻿#Skrypt odpowiedzialny za eksport plików STIR na serwer BPS
+option batch on
+option confirm off
+open sftp://P92830006@10.121.9.50/ -hostkey="ssh-rsa 2048 OqfMOY3rPNxpfbJ4dgrNrsjpNYDCfZr+nYWT1TdVicM=" -privatekey="C:\Program Files (x86)\WinSCP\STIRKEYS\id_rsa.ppk" -passphrase=Core1
+option transfer binary
+#Przejście przez odpowiednie katalogi
+cd 92830006
+cd EXPORT
+cd STIR
+#Rozpoczęcie wysyłki
+#BLOKADY
+cd BLOKADY
+put S:\eksport\BLOKADY_STIR_WER_20_92830006_*.XML
+put S:\eksport\BLOKADY_STIR_WER_20_92830006_*.XML.SEM
+#DANE
+cd ..
+cd KARTOTEKI
+put S:\eksport\DANE_STIR_WER_20_92830006_*.XML
+put S:\eksport\DANE_STIR_WER_20_92830006_*.XML.SEM
+#LOKATY
+cd ..
+cd LOKATY
+put S:\eksport\LOKATY_STIR_WER_20_92830006_*.XML
+put S:\eksport\LOKATY_STIR_WER_20_92830006_*.XML.SEM
+#RACHUNKI WIRTUALNE
+cd ..
+cd RACH_WIRT
+put S:\eksport\RACH_WIRT_WER_20_92830006_*.TXT
+put S:\eksport\RACH_WIRT_WER_20_92830006_*.TXT.SEM
+#RACHUNKI OSÓB
+cd ..
+cd REF_OF
+put S:\eksport\STIR_WT_RACHUNKI_OSOB_WER_20_92830006_*.TXT
+put S:\eksport\STIR_WT_RACHUNKI_OSOB_WER_20_92830006_*.TXT.SEM
+#RACHUNKI OSÓB I TRANSAKCJE
+cd ..
+cd STIR_WT
+put S:\eksport\STIR_WT_RACHUNKI_WER_20_92830006_*.TXT
+put S:\eksport\STIR_WT_RACHUNKI_WER_20_92830006_*.TXT.SEM
+put S:\eksport\STIR_WT_TRANSAKCJE_WER_20_92830006_*.TXT
+put S:\eksport\STIR_WT_TRANSAKCJE_WER_20_92830006_*.TXT.SEM
+cd /
+close
+exit
