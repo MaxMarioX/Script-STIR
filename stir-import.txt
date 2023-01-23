@@ -1,7 +1,7 @@
 ﻿#Skrypt odpowiedzialny za odbiór plików STIR z bramki BPS
 option batch on
 option confirm off
-open sftp://P92830006@10.121.9.50/ -hostkey="ssh-rsa 2048 OqfMOY3rPNxpfbJ4dgrNrsjpNYDCfZr+nYWT1TdVicM=" -privatekey="C:\Program Files (x86)\WinSCP\STIRKEYS\id_rsa.ppk" -passphrase=Core1
+open sftp://********@***.***.***.***/ -hostkey="ssh-rsa 2048 OqfMOY3r********************************=" -privatekey="C:\Program Files (x86)\WinSCP\STIRKEYS\id_rsa.ppk" -passphrase=******
 option transfer binary
 #Przejście przez odpowiednie katalogi
 cd 92830006
