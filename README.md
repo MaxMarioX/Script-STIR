@@ -1,2 +1,2 @@
 # Script-STIR
-Zestaw skryptów do automatyzacji importu oraz eksportu plików STIR z BPS-u.
+A set of scripts to automate the import and export of STIR files from BPS.
